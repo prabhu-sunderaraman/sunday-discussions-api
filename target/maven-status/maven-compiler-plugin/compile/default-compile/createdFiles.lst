@@ -1,1 +1,8 @@
+com/chubb/assessment/api/dto/response/ErrorResponse.class
 com/chubb/assessment/ChubAssessmentApplication.class
+com/chubb/assessment/api/dto/response/RegionResponse.class
+com/chubb/assessment/api/controller/PolicyController.class
+com/chubb/assessment/api/dto/response/PagedPolicyResponse.class
+com/chubb/assessment/api/dto/response/PolicyStatusResponse.class
+com/chubb/assessment/api/dto/response/MoneyResponse.class
+com/chubb/assessment/api/dto/response/PolicySummaryResponse.class

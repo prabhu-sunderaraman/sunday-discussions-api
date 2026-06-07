@@ -1,22 +1,16 @@
 spring:
   application:
     name: sunday-discussions-api
-  datasource:
-    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:sunday_discussions}
-    username: ${DB_USERNAME:postgres}
-    password: ${DB_PASSWORD:postgres}
-    driver-class-name: org.postgresql.Driver
-  jpa:
-    hibernate:
-      ddl-auto: validate
-    open-in-view: false
-    properties:
-      hibernate:
-        format_sql: true
-  flyway:
-    enabled: true
-    locations: classpath:db/migration
-    baseline-on-migrate: true
+# Datasource / JPA / Flyway configuration removed for now so the service starts
+# without a database. Re-add when the persistence layer is implemented.
 
 server:
   port: ${SERVER_PORT:8080}
+
+# Contract-first: the static OpenAPI YAML is the source of truth. Swagger UI is
+# pointed at the committed spec rather than the code-generated /v3/api-docs
+# (which stays enabled only so the Swagger UI controller is registered).
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    url: /openapi/policies-api.yaml

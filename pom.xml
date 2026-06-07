@@ -19,6 +19,7 @@
 
     <properties>
         <java.version>21</java.version>
+        <springdoc.version>2.7.0</springdoc.version>
     </properties>
 
     <dependencies>
@@ -28,27 +29,20 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>org.flywaydb</groupId>
-            <artifactId>flyway-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.flywaydb</groupId>
-            <artifactId>flyway-database-postgresql</artifactId>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>${springdoc.version}</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <scope>runtime</scope>
-        </dependency>
+        <!--
+            Persistence (PostgreSQL + Spring Data JPA + Flyway) is intentionally
+            removed for now so the service can start without a database.
+            Re-add when the infrastructure/persistence layer is implemented.
+        -->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
