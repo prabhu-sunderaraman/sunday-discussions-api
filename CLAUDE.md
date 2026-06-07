@@ -7,6 +7,7 @@ Whenever generating anything (code, tests, or otherwise), you MUST refer to and 
 - [.claude/rules/java-code-style.md](.claude/rules/java-code-style.md) — Java coding conventions, size limits, design decisions, null handling.
 - [.claude/rules/logging.md](.claude/rules/logging.md) — logging framework, sensitive data, formatting, required context, bulk operations.
 - [.claude/rules/testing.md](.claude/rules/testing.md) — JUnit practices, test naming conventions, test coverage.
+- [.claude/rules/architecture.md](.claude/rules/architecture.md) — layered architecture, package structure, layer dependency rules.
 
 These rules are the context for all generated output and apply every time.
 
