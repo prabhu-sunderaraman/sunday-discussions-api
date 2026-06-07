@@ -22,7 +22,7 @@ These rules MUST be followed every time Java code is generated in this repositor
 - Use `Optional` instead of `null` wherever applicable.
 
 ## Comments
-- **Do not add comments (including Javadoc) above methods.** They clutter the code.
-  Method and parameter names must be self-explanatory instead.
+- **Do not add comments (including Javadoc) above methods, classes, enums, records, or
+  fields.** They clutter the code. Names must be self-explanatory instead.
 - Only add a comment when the *why* behind a line is genuinely non-obvious — never to
   restate what the code already says.

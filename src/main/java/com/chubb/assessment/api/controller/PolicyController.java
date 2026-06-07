@@ -9,14 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * REST controller for the {@code /api/policies} endpoints of the Policy
- * Overview Dashboard.
- *
- * <p>Outline only: declares the endpoint and its HTTP bindings mirroring the
- * OpenAPI contract. The controller stays thin and will delegate to the service
- * layer once that layer is implemented.</p>
- */
 @RestController
 @RequestMapping(PolicyController.BASE_PATH)
 @Validated
