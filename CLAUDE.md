@@ -10,6 +10,10 @@ Whenever generating anything (code, tests, or otherwise), you MUST refer to and 
 
 These rules are the context for all generated output and apply every time.
 
+## Tech Stack — Always Apply
+
+The approved technologies and pinned versions live in [.claude/context/tech-stack.md](.claude/context/tech-stack.md). Use these versions whenever generating build configuration, dependencies, or code.
+
 ## Requirements — Problem Statement
 
 The problem statement lives in [.claude/context/requirements.md](.claude/context/requirements.md). Refer to it for the functional requirements of the project.
