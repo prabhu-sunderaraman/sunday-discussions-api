@@ -26,6 +26,8 @@ All production code lives under the base package `com.chubb.assessment`, organiz
     --- [mapper]
             --- RequestDtoToDomain  Maps request DTOs -> domain models.
             --- DomainToResponseDto Maps domain models -> response DTOs.
+    --- [exception]                 @RestControllerAdvice handler(s) mapping
+                                    exceptions -> HTTP responses/status codes.
 
 [domain]
     --- [models]                    Pure business models. No framework/persistence deps.
@@ -42,7 +44,11 @@ All production code lives under the base package `com.chubb.assessment`, organiz
 
 [config]                            Spring configuration classes.
 
-[common]                            Cross-cutting concerns: logging, correlation ID, etc.
+[common]                            Cross-cutting concerns shared by all layers.
+    --- [exception]                 Generic/technical exceptions used across layers
+                                    (framework-free).
+    --- [util]                      Stateless helpers (formatting, etc.).
+    --- [logging]                   Logging and correlation ID concerns.
 ```
 
 ## Rules of Thumb
@@ -53,5 +59,18 @@ All production code lives under the base package `com.chubb.assessment`, organiz
 - **Mappers** are dedicated classes; do not inline mapping logic across layers.
 - **Cross-cutting concerns** (logging, correlation ID handling — see
   [logging.md](logging.md)) belong in `common`.
+
+## Exceptions and Utilities
+- **Cross-layer utilities** live in `common/util`. They must be **stateless** and
+  **dependency-free** — no imports from `api`, `service`, `infrastructure`, or `domain`.
+  If a helper needs a domain model, it is not cross-cutting; push it into `domain`.
+- **Generic/technical exceptions** shared across layers (e.g. `ResourceNotFoundException`,
+  `ValidationException`) live in `common/exception` and stay **framework-free**.
+- **Domain-specific exceptions** that express a business-rule violation (e.g.
+  `PolicyNotEligibleException`) live in `domain`, next to the model they concern.
+- **Exception handling** (translation to HTTP) is an `api` concern: the
+  `@RestControllerAdvice` handler lives in `api/exception` and maps `common`/`domain`
+  exceptions to response DTOs and HTTP status codes. The exception *types* never depend
+  on the web layer.
 - Honor the size, naming, null-handling, and design rules in
   [java-code-style.md](java-code-style.md) within every layer.
