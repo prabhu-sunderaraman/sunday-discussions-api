@@ -1,8 +1,0 @@
-/Users/prabhusunderaraman/Documents/For_chubb/sunday-discussions-api/src/main/java/com/chubb/assessment/ChubAssessmentApplication.java
-/Users/prabhusunderaraman/Documents/For_chubb/sunday-discussions-api/src/main/java/com/chubb/assessment/api/controller/PolicyController.java
-/Users/prabhusunderaraman/Documents/For_chubb/sunday-discussions-api/src/main/java/com/chubb/assessment/api/dto/response/ErrorResponse.java
-/Users/prabhusunderaraman/Documents/For_chubb/sunday-discussions-api/src/main/java/com/chubb/assessment/api/dto/response/MoneyResponse.java
-/Users/prabhusunderaraman/Documents/For_chubb/sunday-discussions-api/src/main/java/com/chubb/assessment/api/dto/response/PagedPolicyResponse.java
-/Users/prabhusunderaraman/Documents/For_chubb/sunday-discussions-api/src/main/java/com/chubb/assessment/api/dto/response/PolicyStatusResponse.java
-/Users/prabhusunderaraman/Documents/For_chubb/sunday-discussions-api/src/main/java/com/chubb/assessment/api/dto/response/PolicySummaryResponse.java
-/Users/prabhusunderaraman/Documents/For_chubb/sunday-discussions-api/src/main/java/com/chubb/assessment/api/dto/response/RegionResponse.java
